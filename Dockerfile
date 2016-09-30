@@ -1,4 +1,6 @@
-FROM openjdk:8-jre-alpine
+# Using alternative alpine image because default alpine glibc is not compatible
+# with jdk8
+FROM frolvlad/alpine-oraclejdk8:slim
 MAINTAINER Albin Gilles <gilles.albin@gmail.com>
 ENV REFRESHED_AT 2016-09-15
 
